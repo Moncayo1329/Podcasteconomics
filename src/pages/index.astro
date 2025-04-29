@@ -1,12 +1,35 @@
+---
+import Header from "../components/Navigation.astro";
 
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
 
-<html>
+const { title="No Solo Economía ", description ="Es un podcast para aprender de Economía y política aun que no solo eso", image } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="{description}">
+    <meta name="generator" content="{Astro.generator">
+    <title>{title}</title>
+  </head>
   <body>
-    <h1>¡Hola Mundo!</h1>
+    <section>
+		<h1>{title}<h1/>
+      <p>{description}</p>
   </body>
+  <div>
+    <Header />
+
+  </div>
 </html>
 <style>
   h1 {
     color: orange;
   }
-</style>
+</style> 
