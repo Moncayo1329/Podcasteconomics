@@ -1,35 +1,10 @@
 ---
-import Header from "../components/Navigation.astro";
-
-interface Props {
-  title: string;
-  description?: string;
-  image?: string;
-}
-
-const { title="No Solo Economía ", description ="Hola mi nombre es Michael Moncayo y soy un aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política aun que no solo eso.", image } = Astro.props;
+// src/pages/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="{description}">
-    <meta name="generator" content="{Astro.generator">
-    <title>{title}</title>
-  </head>
-  <body>
-    <section>
-		<h1>{title}<h1/>
-      <p set:html={description}></p>
-  </body>
-  <div>
-    <Header />
-
-  </div>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style> 
+<BaseLayout 
+  title="No Solo Economía" 
+  description='Hola mi nombre es Michael Moncayo y soy un aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política, aunque no solo eso.'
+>
+</BaseLayout>
