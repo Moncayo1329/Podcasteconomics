@@ -7,7 +7,7 @@ interface Props {
   image?: string;
 }
 
-const { title="No Solo Economía ", description ="Es un podcast para aprender de Economía y política aun que no solo eso", image } = Astro.props;
+const { title="No Solo Economía ", description ="Hola mi nombre es Michael Moncayo y soy un aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política aun que no solo eso.", image } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +21,7 @@ const { title="No Solo Economía ", description ="Es un podcast para aprender de
   <body>
     <section>
 		<h1>{title}<h1/>
-      <p>{description}</p>
+      <p set:html={description}></p>
   </body>
   <div>
     <Header />
