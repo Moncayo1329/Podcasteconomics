@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = "No Solo Economía",
-  description = "Hola mi nombre es Michael Moncayo y soy un aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política aunque no solo eso.",
+  description = "Aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política aunque no solo eso.",
   image = "/economicspod.png"
 } = Astro.props;
 ---
@@ -23,11 +23,12 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-   <Header />
   <body>
-
     <main>
       <h1>{title}</h1>
+       <Header />
+
+       <h2>Hola a todos!👋</h2>
       <p set:html={description}></p>
       <slot /> <!-- Aquí se inserta el contenido de las páginas -->
     </main>
