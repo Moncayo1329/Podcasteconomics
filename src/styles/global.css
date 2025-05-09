@@ -8,17 +8,22 @@ img{
   margin-left: 500px;
 margin-top:-450px;
 }
-
+p{
+  font-family: "Smooch Sans", sans-serif;
+  font-size:20px;
+}
  h1 {
     color: #566573 ;
     margin-left: 600px;
     margin-top:100px;
+     font-family: "Roboto Condensed", sans-serif;
   }
 
   h2 {
     color: #566573 ;
     margin-left: 500px;
     margin-top:60px;
+   font-family: "Roboto Condensed", sans-serif;
   }
 
 
@@ -33,6 +38,7 @@ margin-top:-450px;
     margin-top: -30px;
     display: flex;
     padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
   }
   .nav-links li {
     list-style: none;
