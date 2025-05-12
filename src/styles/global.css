@@ -2,7 +2,7 @@
 
 /* Estilos generales */
 body {
-  background-color: #1c2833;
+  background-color:rgb(5, 9, 14);
 }
 
 /* Estilos para imágenes */
@@ -48,6 +48,7 @@ h2 {
   margin-right: auto; /* Centrado con mx-auto */
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
+  text-decoration:none;
 }
 
 
@@ -59,6 +60,7 @@ h2 {
   text-transform: uppercase;
   color: #b7950b; /* Color dorado */
   transition: color 0.3s ease; /* Animación suave para hover */
+  text-decoration:none;
 
 }
 

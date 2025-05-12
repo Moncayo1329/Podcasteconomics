@@ -1,5 +1,5 @@
 ---
-date: "2025-05-12"
+date: "Mayo 12, 2025"
 title: "Primer Episodio"
 descripcion: "Bienvenidos a mi blog sobre economía, espero les guste como a mí me gusta."
 estreno: "https://substack.com/home/post/p-60505894"
