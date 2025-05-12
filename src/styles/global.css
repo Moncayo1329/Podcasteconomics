@@ -1,56 +1,120 @@
-/* nav styles */
+/* global.css */
 
-body{
-      background-color:#1c2833;
+/* Estilos generales */
+body {
+  background-color: #1c2833;
 }
 
-img{
-  margin-left: 500px;
-margin-top:-450px;
+/* Estilos para imágenes */
+img {
+  max-width: 100%; /* Evita que las imágenes se desborden */
 }
-p{
+
+/* Estilos para texto */
+p {
   font-family: "Smooch Sans", sans-serif;
-  font-size:20px;
+  font-size: 1.25rem; /* 20px, en rem para escalabilidad */
+  color: #d0d3d4;
+  text-align: center;
 }
- h1 {
-    color: #566573 ;
-    margin-left: 600px;
-    margin-top:100px;
-     font-family: "Roboto Condensed", sans-serif;
+
+/* Encabezados */
+h1 {
+  color: #d0d3d4;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.5rem; /* Tamaño adecuado para escritorio */
+  text-align: center; /* Centrado en todas las pantallas */
+}
+
+h2 {
+  color: #566573;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.75rem; /* Tamaño adecuado para escritorio */
+  text-align: center; /* Centrado en todas las pantallas */
+}
+
+/* Estilos para el menú */
+.menu {
+  text-align: center; /* Centra el contenedor del menú */
+}
+
+/* Estilos para los enlaces del menú */
+.nav-links {
+  max-width: 600px; /* Ancho máximo para los enlaces */
+  display: flex; /* Diseño horizontal */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  margin-left: auto; /* Centrado con mx-auto */
+  margin-right: auto; /* Centrado con mx-auto */
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.nav-links .nav-item {
+  list-style: none; /* Elimina viñetas */
+}
+
+.nav-links .nav-link {
+  display: block;
+  padding: 10px 20px; /* Espaciado */
+  font-size: 12px; /* Tamaño de fuente */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b7950b; /* Color dorado */
+  transition: color 0.3s ease; /* Animación suave para hover */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+}
+
+.nav-links .nav-link:hover {
+  color: #d0d3d4; /* Gris claro al pasar el mouse */
+}
+
+
+
+.title-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 1rem; /* Espacio entre logo y h1 */
+}
+
+/* Estilos para el logo */
+.logo {
+  display: block;
+}
+
+
+/* Media queries para móviles */
+@media (max-width: 767.98px) {
+  p {
+    font-size: 1rem; /* Reduce el tamaño en móviles */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Tamaño más pequeño en móviles */
   }
 
   h2 {
-    color: #566573 ;
-    margin-left: 500px;
-    margin-top:60px;
-   font-family: "Roboto Condensed", sans-serif;
-  }
-
-
-  p{
-    color:#d0d3d4;
-    text-align: center;
+    font-size: 1.4rem; /* Tamaño más pequeño en móviles */
   }
 
   .nav-links {
-    max-width: 600px; 
-    margin-left: 580px;
-    margin-top: -30px;
-    display: flex;
-    padding: 0;
-    font-family: "Roboto Condensed", sans-serif;
+    max-width: 100%; /* Ocupa todo el ancho en móviles */
+    flex-direction: row; /* Mantiene los enlaces en horizontal */
+    justify-content: center; /* Centra los enlaces */
+    padding: 0.5rem 0; /* Espacio adicional */
   }
-  .nav-links li {
-    list-style: none;
+
+  .nav-links .nav-link {
+    padding: 0.5rem 1rem; /* Menos espaciado en móviles */
+    font-size: 12px; /* Mantiene el tamaño de fuente */
+  }
+
+  .title-container {
+    flex-direction: column; /* Apila logo y h1 en móviles */
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem; /* Espacio debajo del logo */
+  }
 }
-  
-  .nav-links a {
-     display: block;
-    padding: 10px 20px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #b7950b;
-  }
-  
-  
