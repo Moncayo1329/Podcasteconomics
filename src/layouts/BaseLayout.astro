@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = "No Solo Economía",
-  description = "Aspirante a convertirme en economista.<br> Es un blog para aprender de Economía y política aunque no solo eso.",
+  description = "Aspirante a convertirme en economista.<br> Es un blog para aprender de <u>Economía</u> y <u>política</u> aunque no solo eso.",
   image = "/economicspod.png"
 } = Astro.props;
 ---
@@ -19,10 +19,14 @@ const {
 <html lang="es">
   <head>
      <meta charset="UTF-8" />
-    <meta name="description" content={description.replace(/<[^>]+>/g, "")} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description?.replace(/<[^>]+>/g, '') || "Blog de economía"} />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -53,7 +57,7 @@ const {
 
   <div class="row">
     <div class="col-12 col-md-8 col-lg-10 my-4 mx-auto text-center">
-      <h2 class="mb-5" style="position: relative; left: -30px">Hola a todos! 👋</h2>
+      <h2 class="mb-5" style="position: relative; left: -70px">Hola a todos! 👋</h2>
        <p class="lead" set:html={description}></p>
     </div>
   </div>
