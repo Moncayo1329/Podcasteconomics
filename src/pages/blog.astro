@@ -1,9 +1,42 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const posts = await getCollection("posts");
+console.log("Posts cargados:", posts);
+console.log("Posts length:", posts.length);
 ---
 <BaseLayout 
   title="No Solo Economía" 
-  description="Aquí encontrarás artículos sobre <u>economía y política."
+  description="Aquí encontrarás artículos sobre economía y política."
 >
+
 </BaseLayout>
+   <body>
+    <main>
+      <h2 class="mb-5" style="position: relative; left: -120px">Posts</h2>
+      <ul>
+        {posts.map(post => (
+          <li>
+  <p class="mb-5" style="position: relative; left: -130px">
+    {post.data.date}
+  </p>
+
+  <p class="underline text-center position-relative" style="top: -80px;">
+    <a href={post.data.estreno} class="text-decoration-none text-dark">
+      {post.data.title}
+    </a>
+  </p>
+
+  <p class="mb-5" style="position: relative; left:-1px; top:-80px;">
+    "{post.data.descripcion}"
+  </p>
+</li>
+        ))}
+      </ul>
+    </main>
+  </body>
+
+
+
 

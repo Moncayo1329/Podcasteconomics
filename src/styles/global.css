@@ -82,6 +82,11 @@ h2 {
 }
 
 
+.underline {
+  text-decoration: underline;
+}
+
+
 /* Media queries para móviles */
 @media (max-width: 767.98px) {
   p {
