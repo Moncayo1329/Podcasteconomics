@@ -18,11 +18,11 @@ console.log("Posts length:", posts.length);
       <ul>
         {posts.map(post => (
           <li>
-  <p class="mb-5" style=" color: #566573;position: relative; left: -130px">
+  <p class="mb-5" style=" color: #566573;position: relative; left: -150px">
     {post.data.date}
   </p>
 
-  <p class="underline text-center position-relative" style="top: -80px;">
+  <p class="mb-5 text-gray shift-left">
     <a href={post.data.estreno} target="_blank" rel="noopener noreferrer" style="color: #d0d3d4;">
       {post.data.title}
     </a>
