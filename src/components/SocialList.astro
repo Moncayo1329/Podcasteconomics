@@ -12,7 +12,8 @@ const socialLinks: Array<{
   isWebmention?: boolean;
 }> = [
   {
-    name: "mdi:github",
+
+     name: "mdi:github",
     friendlyName: "Github",
     link: "https://github.com/Moncayo1329",
   },
@@ -35,21 +36,22 @@ const socialLinks: Array<{
 ];
 ---
 
-<div class="flex flex-wrap items-end gap-x-4">
-  <p>Find me on</p>
-  <ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
-    {socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
-      <li class="flex">
-        <a
-          class="inline-block p-1 sm:hover:text-link"
-          href={link}
-          target="_blank"
-          rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
-        >
-          <Icon class="h-6 w-6" name={name} aria-hidden="true" focusable="false" />
-          <span class="sr-only">{friendlyName}</span>
-        </a>
-      </li>
-    ))}
-  </ul>
+<div class="d-flex justify-content-center align-items-end gap-3">
+<p style="position: relative; left:-50px">Contactos</p>
+<ul class="d-flex justify-content-center gap-2 flex-shrink-0">
+  {socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
+    <li class="d-flex" style="position: relative; left:-85px">
+      <a
+        class="d-inline-block p-1 social-link"
+        href={link}
+        target="_blank"
+        rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
+      >
+        <Icon class="h-6 w-6" 
+         style="width: 30px; height: 28px; color: #566573;" 
+         name={name} aria-hidden="true" focusable="false" />
+      </a>
+    </li>
+  ))}
+</ul>
 </div>

@@ -88,6 +88,14 @@ h2 {
   text-decoration: underline;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 
 /* Media queries para móviles */
 @media (max-width: 767.98px) {
