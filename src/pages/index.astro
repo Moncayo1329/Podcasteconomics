@@ -2,37 +2,33 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-// Obtener la colección de podcasts
 const podcasts = await getCollection("posts");
 console.log("Podcasts cargados:", podcasts);
 console.log("Podcasts length:", podcasts.length);
-
+---
 
 <BaseLayout 
   title="Economía Bullish" 
-  description="Es un podcast de <u>economía</u> y <u>política</u>, <br> aunque no solo eso. Aspirante a convertirme en economista..."
+  description="Es un podcast de <u>economía</u> y <u>política</u>, <br> aunque no solo eso. Aspirante a convertirme en economista."
 >
   <main>
-     <h2 class="mb-5" style="position: relative; left: -120px">Posts</h2>
-      <ul>
-        {podcasts.map(post => (
-          <li>
-  <p class="mb-5" style=" color: #566573;position: relative; left: -120px">
-    {post.data.date}
-  </p>
-
-  <p class="mb-5 text-gray shift-left">
-    <a href={post.data.estreno} target="_blank" rel="noopener noreferrer" style="color: #d0d3d4; position: relative; left:35px; top:-75px;">
-      {post.data.title}
-    </a>
-  </p>
-
-  <p class="mb-5" style="position: relative; left:-1px; top:-100px;">
-    "{post.data.descripcion}"
-  </p>
-</li>
-        ))}
-      </ul>
+    <h2 class="mb-5" style="position: relative; left: -120px">Posts</h2>
+    <ul>
+      {podcasts.map((post) => (
+        <li>
+          <p class="mb-5" style="color: #566573; position: relative; left: -120px;">
+            {post.data.date}
+          </p>
+          <p class="mb-5 text-gray shift-left">
+            <a href={post.data.estreno} target="_blank" rel="noopener noreferrer" style="color: #d0d3d4; position: relative; left:35px; top:-75px;">
+              {post.data.title}
+            </a>
+          </p>
+          <p class="mb-5" style="position: relative; left:-1px; top:-100px;">
+            "{post.data.descripcion}"
+          </p>
+        </li>
+      ))}
+    </ul>
   </main>
-
 </BaseLayout>
