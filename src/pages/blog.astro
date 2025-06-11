@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
 
 const posts = await getCollection("posts");
 console.log("Posts cargados:", posts);
@@ -37,6 +38,7 @@ console.log("Posts length:", posts.length);
     </main>
   </body>
 
+<Footer />
 
 
 
