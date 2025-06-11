@@ -7,4 +7,4 @@ estreno: "https://michaelmoncayo.substack.com/p/repensar-lo-que-heredamos"
 Este es el contenido del post.
 
 
-[🔗 Ver el estreno del episodio](https://substack.com/home/post/p-60505894)
+[🔗 Ver el estreno del episodio](https://michaelmoncayo.substack.com/p/repensar-lo-que-heredamos)

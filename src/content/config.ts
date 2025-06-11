@@ -10,6 +10,18 @@ const postsCollection = defineCollection({
   }),
 });
 
+
+const podcastsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.string(),
+    estreno: z.string(),
+  }),
+});
+
+
 export const collections = {
   posts: postsCollection,
+ podcasts: podcastsCollection,
 };

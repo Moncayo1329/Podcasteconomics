@@ -1,6 +1,6 @@
 ---
 title: "Episodio 1"
-description: "Bienvenidos a mi blog sobre economía, espero les guste como a mí me gusta."
+description: "Buscando el tiempo para grabar, por ahora solo tengo blog"
 date: "2025-05-12" 
 estreno: "https://substack.com/home/post/p-60505894"
 ---

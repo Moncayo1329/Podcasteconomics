@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const podcasts = await getCollection("posts");
+const podcasts = await getCollection("podcasts");
 console.log("Podcasts cargados:", podcasts);
 console.log("Podcasts length:", podcasts.length);
 ---
@@ -11,24 +11,31 @@ console.log("Podcasts length:", podcasts.length);
   title="Economía Bullish" 
   description="Es un podcast de <u>economía</u> y <u>política</u>, <br> aunque no solo eso. Aspirante a convertirme en economista."
 >
+</BaseLayout>
   <main>
     <h2 class="mb-5" style="position: relative; left: -120px">Posts</h2>
     <ul>
-      {podcasts.map((post) => (
+      {podcasts.map((podcast) => (
         <li>
           <p class="mb-5" style="color: #566573; position: relative; left: -120px;">
-            {post.data.date}
+            {podcast.data.date}
           </p>
           <p class="mb-5 text-gray shift-left">
-            <a href={post.data.estreno} target="_blank" rel="noopener noreferrer" style="color: #d0d3d4; position: relative; left:35px; top:-75px;">
-              {post.data.title}
+            <a 
+              href={podcast.data.estreno} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style="color: #d0d3d4; position: relative; left:35px; top:-75px;"
+            >
+              {podcast.data.title}
             </a>
           </p>
           <p class="mb-5" style="position: relative; left:-1px; top:-100px;">
-            "{post.data.descripcion}"
+            "{podcast.data.description}"
           </p>
         </li>
       ))}
     </ul>
   </main>
-</BaseLayout>
+
+
