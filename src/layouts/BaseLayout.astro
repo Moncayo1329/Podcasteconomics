@@ -14,7 +14,8 @@ interface Props {
 const {
   title = "Economía Bullish",
   description = "Aspirante a convertirme en economista.<br> Es un blog para aprender de <u>Economía</u> y <u>política</u> aunque no solo eso.",
-  image = "/economicspod.png"
+  image = "/economicspod.png",
+  loading = "lazy"
 } = Astro.props;
 ---
 
@@ -46,10 +47,11 @@ const {
         <a href="/" class="logo">
           <img 
             src="images/economicspod.png"
+            loading="lazy"
             width="60"
-            height="60"
-            style="border-radius: 30%;"
-            alt="Economics logo"
+           height="60"
+           style="border-radius: 30%;"
+          alt="Economics logo"
           />
         </a>
         <h1 class="mb-1">{title}</h1>
