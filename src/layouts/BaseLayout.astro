@@ -14,7 +14,7 @@ interface Props {
 const {
   title = "Duendes & Galeones",
   description = "Aspirante a convertirme en economista.<br> Es un blog para aprender de <u>Economía</u> y <u>política</u> aunque no solo eso.",
-  image = "/economicspod.png",
+  image = "/images/image.jpg",
   loading = "lazy"
 } = Astro.props;
 ---
@@ -27,7 +27,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Duendes & Galeones">
-<meta name="twitter:description" content="Es un podcast de economía y política, aunque no solo eso. Aspirante a convertirme en economista.">
+<meta name="twitter:description" content="Es un podcast de economía y política. Aspirante a convertirme en economista.">
     <title>{title}</title>
     <meta name="description" content={description?.replace(/<[^>]+>/g, '') || "Blog de economía"} />
     <!-- Favicon -->
@@ -53,7 +53,7 @@ const {
       <div class="title-container">
         <a href="/" class="logo">
           <img 
-            src="images/economicspod.png"
+            src="images/image.jpg"
             loading="lazy"
             width="60"
            height="60"
